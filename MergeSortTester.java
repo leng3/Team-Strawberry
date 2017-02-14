@@ -30,7 +30,24 @@ public class MergeSortTester
      ******************************/
     public static void main( String[] args ) 
     {
+	int[] one = {1};
+	int[] ten = {10, 9, 8, 7, 6, 5, 4, 3, 2, 1};
+	int[] hundred = new int[100];
+	int[] huge = new int[100000]
+;
+	for (int x = 0; x < hundred.length; x++){
+	    hundred[x] = (int)(Math.random() * 100);
+	}
 
+	for (int x = 0; x < huge.length; x++){
+	    huge[x] = (int)(Math.random() * 100000);
+	}
+	
+	long startTime = System.nanoTime();
+	MergeSort.sort(huge);
+
+	long endTime = System.nanoTime();
+	System.out.println("Time in seconds: " + ((endTime - startTime)/1000000000.0));
     }//end main
 
 }//end class
