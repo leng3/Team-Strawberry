@@ -44,10 +44,11 @@ public class MergeSortTester
 	}
 	
 	long startTime = System.nanoTime();
-	MergeSort.sort(huge);
-
+	for (int x = 0; x < 10; x+=1){
+	    MergeSort.sort(huge);
+	}
 	long endTime = System.nanoTime();
-	System.out.println("Time in seconds: " + ((endTime - startTime)/1000000000.0));
+	System.out.println("Time in seconds: " + (((endTime - startTime)/1000000000.0))/10);
     }//end main
 
 }//end class
