@@ -1,7 +1,7 @@
-//Team Strawberry -- Lisa Eng, Elaina Chung, and Niko 
+//Team Strawberry -- Lisa Eng, Elaina Chung, and Nikolas Cruz-Marsted
 //APCS2 pd3
-//HW06 -- Step 1: Split, Step 2: ?, Step 3: Sorted!
-//2016-02-10
+//HW07 -- What Does the Data Say?  
+//2016-02-13
 
 /*======================================
   class MergeSort
