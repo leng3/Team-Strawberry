@@ -19,6 +19,8 @@ Merge method:
    
    for every array, split the array into two arrays. and keep sorting the two arays. When the array length is one, return the array and merge. merge the two sorted arrays.
   ======================================*/
+import java.util.Arrays;
+
 
 public class MergeSort {
 
@@ -76,37 +78,12 @@ public class MergeSort {
      ******************************************************/
     public static int[] sort( int[] arr ) 
     {
-	int ctr = 0;
-	int halfL = arr.length/2;
-	int[] arr1 = new int[halfL];
-	int[] arr2 = new int[arr.length - halfL];
-	
-	if (arr.length == 1){
-	    return arr;
-	}
-	if ((arr.length % 2) == 0) {
-	    for (int x = 0; x < halfL; x+=1){
-		arr1[x] = arr[x];
-	    }
-	    for (int x = halfL; x < arr.length; x+=1){
-		arr2[ctr] = arr[x];
-		ctr+=1;
-	    }
-	    //printArray(arr1);
-	    //printArray(arr2);
-	}
-	else{
-	    for (int x = 0; x < halfL; x+=1){
-		arr1[x] = arr[x];
-	    }
-	    for (int x = halfL + 1; x < arr.length; x+=1){
-		arr2[ctr] = arr[x];
-		ctr+=1;
-	    }
-	    //printArray(arr1);
-	    //printArray(arr2);
-	}
-	return merge(sort(arr1), sort(arr2));
+	if(arr.length == 1){
+            return arr;
+        }
+        else{
+            return(   merge  (  sort(Arrays.copyOfRange(arr,0,arr.length/2))   , sort(Arrays.copyOfRange(arr,arr.length/2,arr.length))        )      ); 
+        }
     }//end sort()
 
 
