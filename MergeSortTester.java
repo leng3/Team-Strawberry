@@ -1,8 +1,14 @@
+//Team Strawberry -- Lisa Eng, Elaina Chung, and Nikolas Cruz-Marsted
+//APCS2 pd3
+//HW07 -- What Does the Data Say?  
+//2016-02-13
 /*======================================
   class MergeSortTester
 
   ALGORITHM:
-  For MergeSort, it first checks if the list only has one element. If it does then it will return the array. If not, the array is split into two again and again until there are only arrays of one element. Then, the arrays are merged together in the reverse oreder that it is split.
+  For MergeSort, it first checks if the list only has one element. If it does then it will return the array. 
+  If not, the array is split into two again and again until there are only arrays of one element. 
+  Then, the arrays are merged together in the reverse oreder that it is split.
 
   BIG-OH CLASSIFICATION OF ALGORITHM:
   O(nlogn)
@@ -16,7 +22,8 @@
   n=1000000  time: 0.482971713
 
   ANALYSIS:
-  The runtimes increase as the data size increases. We had graphed our data and it showed a linear trend. The slope was steep, so we came to the conclusion thatit was O(nlogn) runtime. 
+  The runtimes increase as the data size increases. We had graphed our data and it showed a linear trend. 
+  The slope was steep, so we came to the conclusion thatit was O(nlogn) runtime. 
   ======================================*/
 
 public class MergeSortTester 
@@ -24,7 +31,11 @@ public class MergeSortTester
 
     /******************************
      * execution time analysis 
-     * We first made multiple arrays with different data sizes and filled them up. Then, we set a variable, startTime and used  System.nanoTime() to find out the runtime of the program so far. Then we sorted the array ten times for each data size using a for. Then, we set another variable, endTime, and used System.nanoTime() again. We printed out the difference between the endTime and startTime, converted it into seconds, then averaged it. 
+     * We first made multiple arrays with different data sizes and filled them up. 
+     Then, we set a variable, startTime and used  System.nanoTime() to find out the runtime of the program so far. 
+     Then we sorted the array ten times for each data size using a for. 
+     Then, we set another variable, endTime, and used System.nanoTime() again. 
+     We printed out the difference between the endTime and startTime, converted it into seconds, then averaged it. 
      ******************************/
     public static void main( String[] args ) 
     {
