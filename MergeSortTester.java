@@ -2,21 +2,21 @@
   class MergeSortTester
 
   ALGORITHM:
-  <INSERT YOUR DISTILLATION OF ALGO HERE>
+  For MergeSort, it first checks if the list only has one element. If it does then it will return the array. If not, the array is split into two again and again until there are only arrays of one element. Then, the arrays are merged together in the reverse oreder that it is split.
 
   BIG-OH CLASSIFICATION OF ALGORITHM:
-  <INSERT YOUR EXECUTION TIME CATEGORIZATION OF MERGESORT HERE>
+  O(nlogn)
 
   Mean execution times for dataset of size n:
-  Batch size: <# of times each dataset size was run>
-  n=1       time: 
-  n=10      time: 
-  n=100     time: 
+  Batch size: 10
+  n=1       time: 2.82E-04s
+  n=10      time: 3.53E-04s
+  n=100     time: 4.75E-04s
   ...
-  n=<huge>  time: 
+  n=1000000  time: 0.482971713
 
   ANALYSIS:
-  <INSERT YOUR RESULTS ANALYSIS HERE>
+  The runtimes increase as the data size increases. We had graphed our data and it showed a linear trend. The slope was steep, so we came to the conclusion thatit was O(nlogn) runtime. 
   ======================================*/
 
 public class MergeSortTester 
@@ -24,46 +24,27 @@ public class MergeSortTester
 
     /******************************
      * execution time analysis 
-     * <INSERT YOUR DESCRIPTION HERE OF 
-     *  YOUR APPARATUS FOR GENERATING EXECUTION 
-     *  TIME DATA...>
+     * We first made multiple arrays with different data sizes and filled them up. Then, we set a variable, startTime and used  System.nanoTime() to find out the runtime of the program so far. Then we sorted the array ten times for each data size using a for. Then, we set another variable, endTime, and used System.nanoTime() again. We printed out the difference between the endTime and startTime, converted it into seconds, then averaged it. 
      ******************************/
     public static void main( String[] args ) 
     {
 	int[] one = {1};
 	int[] ten = {10, 9, 8, 7, 6, 5, 4, 3, 2, 1};
 	int[] hundred = new int[100];
-	int[] T = new int[1000];
-	int[] TT = new int[10000];
-	int[] HT = new int[100000];
-	int[] M = new int[1000000];
-	
+	int[] huge = new int[100000]
+;
 	for (int x = 0; x < hundred.length; x++){
 	    hundred[x] = (int)(Math.random() * 100);
 	}
 
-	for (int x = 0; x < T.length; x++){
-	    T[x] = (int)(Math.random() * 1000);
-	}
-	
-	for (int x = 0; x < TT.length; x++){
-	    TT[x] = (int)(Math.random() * 10000);
-	}
-	
-	for (int x = 0; x < HT.length; x++){
-	    HT[x] = (int)(Math.random() * 100000);
-	}
-
-	for (int x = 0; x < M.length; x++){
-	    M[x] = (int)(Math.random() * 1000000);
+	for (int x = 0; x < huge.length; x++){
+	    huge[x] = (int)(Math.random() * 100000);
 	}
 	
 	long startTime = System.nanoTime();
-
 	for (int x = 0; x < 10; x+=1){
-	    MergeSort.sort(M);
+	    MergeSort.sort(huge);
 	}
-	
 	long endTime = System.nanoTime();
 	System.out.println("Time in seconds: " + (((endTime - startTime)/1000000000.0))/10);
     }//end main
