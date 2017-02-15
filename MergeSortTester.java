@@ -61,7 +61,7 @@ public class MergeSortTester
 	long startTime = System.nanoTime();
 
 	for (int x = 0; x < 10; x+=1){
-	    MergeSort.sort(huge);
+	    MergeSort.sort(M);
 	}
 	
 	long endTime = System.nanoTime();
