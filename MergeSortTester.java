@@ -22,8 +22,8 @@
   n=1000000  time: 0.482971713
 
   ANALYSIS:
-  The runtimes increase as the data size increases. We had graphed our data and it showed a linear trend. 
-  The slope was steep, so we came to the conclusion thatit was O(nlogn) runtime. 
+  The runtimes increase as the data size increases. We had multiple test cases for the same data size, and plotted it on the graph. 
+  The graph had a curve to it, so we came to the conclusion that it was O(nlogn) runtime. 
   ======================================*/
 
 public class MergeSortTester 
@@ -35,7 +35,7 @@ public class MergeSortTester
      Then, we set a variable, startTime and used  System.nanoTime() to find out the runtime of the program so far. 
      Then we sorted the array ten times for each data size using a for. 
      Then, we set another variable, endTime, and used System.nanoTime() again. 
-     We printed out the difference between the endTime and startTime, converted it into seconds, then averaged it. 
+     We printed out the difference between the endTime and startTime, converted it into seconds. 
      ******************************/
     public static void main( String[] args ) 
     {
